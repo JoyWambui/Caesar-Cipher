@@ -10,6 +10,11 @@ public class EncoderTest {
         Encoder sampleEncoder = new Encoder("my name", 3, "pb qdph");
         assertTrue(sampleEncoder instanceof Encoder);
     }
+    @Test
+    public void newEncoder_getsStringInputSentence_myName() {
+        Encoder sampleEncoder = new Encoder("my name", 3, "pb qdph");
+        assertEquals("my name", sampleEncoder.getInputSentence());
+    }
 
 
 }

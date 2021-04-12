@@ -1,6 +1,12 @@
 package models;
 
 public class Encoder {
-    public  Encoder(String inputSentence, int key, String encodedResult){}
-
+    private String inputSentence;
+    public  Encoder(String inputSentence, int key, String encodedResult){
+        this.inputSentence = inputSentence;
     }
+
+    public String getInputSentence() {
+        return inputSentence;
+    }
+}
