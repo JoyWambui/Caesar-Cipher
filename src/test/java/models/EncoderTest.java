@@ -19,7 +19,11 @@ public class EncoderTest {
     public void newEncoder_getsKeyValue_3() {
         Encoder sampleEncoder = new Encoder("my Name", 3, "pb qdph");
         assertEquals(3, sampleEncoder.getKey());
-
+    }
+    @Test
+    public void newEncoder_getsResultSentence_pbQdph() {
+        Encoder sampleEncoder = new Encoder("my Name", 3, "pb qdph");
+        assertEquals("pb qdph", sampleEncoder.getEncodedResult());
     }
 
 
