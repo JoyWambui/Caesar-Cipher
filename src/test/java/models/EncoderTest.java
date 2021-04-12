@@ -15,6 +15,12 @@ public class EncoderTest {
         Encoder sampleEncoder = new Encoder("my name", 3, "pb qdph");
         assertEquals("my name", sampleEncoder.getInputSentence());
     }
+    @Test
+    public void newEncoder_getsKeyValue_3() {
+        Encoder sampleEncoder = new Encoder("my Name", 3, "pb qdph");
+        assertEquals(3, sampleEncoder.getKey());
+
+    }
 
 
 }
