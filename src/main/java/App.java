@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import models.Encoder;
 
 public class App {
     public static void main(String[]args)throws Exception{
@@ -24,6 +25,13 @@ public class App {
                 } while ((key<1||key>25));
 
                 System.out.println(key);
+                if (chosenOption.equals("Encrypt")){
+                    Encoder encryption = new Encoder(inputSentence,key);
+                    String outputSentence = encryption.encode(inputSentence,key);
+                    System.out.println(outputSentence);
+                }else{
+                    System.out.println("next");
+                }
 
             } else if (chosenOption.equals("Exit")) {
                 System.out.println("Goodbye!");
