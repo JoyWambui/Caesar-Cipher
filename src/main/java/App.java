@@ -34,10 +34,10 @@ public class App {
                     System.out.println(encryption.toString());
                 }else{
                     Decoder decryption = new Decoder(inputSentence,key);
-                    String outputSentence = decryption.encode(inputSentence,key);
-                    decryption.setDecryptedSentence(inputSentence);
+                    String outputSentence = decryption.decode(inputSentence,key);
+                    decryption.setEncryptedSentence(inputSentence);
                     decryption.setDecryptionKey(key);
-                    decryption.setEncryptedSentence(outputSentence);
+                    decryption.setDecryptedSentence(outputSentence);
                     System.out.println(decryption.toString());
                 }
 
