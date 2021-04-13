@@ -6,10 +6,9 @@ public class Encoder {
     private String inputSentence;
     private int key;
     private String encodedResult;
-    public  Encoder(String inputSentence, int key, String encodedResult){
+    public  Encoder(String inputSentence, int key){
         this.inputSentence = inputSentence;
         this.key = key;
-        this.encodedResult = encodedResult;
     }
 
     public String getInputSentence() {
@@ -21,9 +20,6 @@ public class Encoder {
         return key;
     }
 
-    public String getEncodedResult() {
-        return encodedResult;
-    }
     public String encode(String inputSentence, int key){
         StringBuilder encodedStringBuilder = new StringBuilder();
         for (int position = 0; position<inputSentence.length(); position++) {
