@@ -34,7 +34,7 @@ public class App {
                     System.out.println(encryption.toString());
                 }else{
                     Decoder decryption = new Decoder(inputSentence,key);
-                    String outputSentence = decryption.encode(inputSentence,key);
+                    String outputSentence = decryption.decode(inputSentence,key);
                     decryption.setEncryptedSentence(inputSentence);
                     decryption.setDecryptionKey(key);
                     decryption.setDecryptedSentence(outputSentence);
