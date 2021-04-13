@@ -1,21 +1,49 @@
 package models;
 
+
+
 public class Encoder {
     private String inputSentence;
     private int key;
-
+    private String encodedResult;
     public  Encoder(String inputSentence, int key){
         this.inputSentence = inputSentence;
         this.key = key;
     }
 
     public String getInputSentence() {
+
         return inputSentence;
+    }
+
+    public void setInputSentence(String inputSentence) {
+        this.inputSentence = inputSentence;
     }
 
     public int getKey() {
 
         return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
+    }
+
+    public String getEncodedResult() {
+        return encodedResult;
+    }
+
+    public void setEncodedResult(String encodedResult) {
+        this.encodedResult = encodedResult;
+    }
+
+    @Override
+    public String toString() {
+        return "Encoder{" +
+                "inputSentence='" + inputSentence + '\'' +
+                ", key=" + key +
+                ", encodedResult='" + encodedResult + '\'' +
+                '}';
     }
 
     public String encode(String inputSentence, int key){
@@ -35,5 +63,6 @@ public class Encoder {
 
         return encodedStringBuilder.toString();
     }
+
 
 }
