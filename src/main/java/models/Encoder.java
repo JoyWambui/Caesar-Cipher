@@ -20,15 +20,15 @@ public class Encoder {
 
     public String encode(String inputSentence, int key){
         StringBuilder encodedStringBuilder = new StringBuilder();
-        for (int position = 0; position<inputSentence.length(); position++) {
-            if(Character.isSpaceChar(inputSentence.charAt(position))){
-                char characterPosition = (char) ((int)inputSentence.charAt(position));
+        for (int index = 0; index <inputSentence.length(); index++) {
+            if(Character.isSpaceChar(inputSentence.charAt(index))){
+                char characterPosition = (char) ((int)inputSentence.charAt(index));
                 encodedStringBuilder.append(characterPosition);
-            }else if(Character.isUpperCase(inputSentence.charAt(position))) {
-                char characterPosition = (char) (((int)inputSentence.charAt(position)+key-65)%26 +65);
+            }else if(Character.isUpperCase(inputSentence.charAt(index))) {
+                char characterPosition = (char) (((int)inputSentence.charAt(index)+key-65)%26 +65);
                 encodedStringBuilder.append(characterPosition);
             }else{
-                char characterPosition = (char) (((int)inputSentence.charAt(position)+key-97)%26 +97);
+                char characterPosition = (char) (((int)inputSentence.charAt(index)+key-97)%26 +97);
                 encodedStringBuilder.append(characterPosition);
             }
         }
