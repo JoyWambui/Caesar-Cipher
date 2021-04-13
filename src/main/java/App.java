@@ -9,14 +9,21 @@ public class App {
         while (runApplication) {
             System.out.println("Welcome to the Caesar-Cipher Program!");
             System.out.println("Enter one option: Encrypt, Decrypt, Exit.");
-            System.out.println(":");
+            System.out.println("Option: ");
 
             String chosenOption = reader.readLine();
-            if (chosenOption.equals("Encrypt")) {
-                System.out.println("Enter Sentence to be encrypted: ");
+            if (chosenOption.equals("Encrypt")||chosenOption.equals("Decrypt")) {
+                System.out.println("Enter Sentence : ");
+                String inputSentence = reader.readLine();
+                System.out.println(inputSentence);
+                int key;
+                do {
+                    System.out.println("Enter Desired Key. Choose a number between 1 and 25 ");
+                    String stringKey = reader.readLine();
+                    key = Integer.parseInt(stringKey);
+                } while ((key<1||key>25));
 
-            } else if (chosenOption.equals("Decrypt")) {
-                System.out.println("Enter Sentence to be decrypted: ");
+                System.out.println(key);
 
             } else if (chosenOption.equals("Exit")) {
                 System.out.println("Goodbye!");
