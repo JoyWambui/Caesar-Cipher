@@ -22,6 +22,6 @@ Any issues can be addressed either:
 * Through slack @JoyWambui.
 * Through my email : joywambuindegwa@gmail.com
 ### License
- Project licensed under [MIT License](https://github.com/JoyWambui/Caesar-Cipher/blob/master/LICENSE
+ Project licensed under [MIT License](https://github.com/JoyWambui/Caesar-Cipher/blob/master/LICENSE)
 
  Copyright (c) 2021 **JoyWambui**
