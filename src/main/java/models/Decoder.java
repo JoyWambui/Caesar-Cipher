@@ -14,8 +14,8 @@ public class Decoder {
         return encryptedSentence;
     }
 
-    public void setDecryptedSentence(String decryptedSentence) {
-        this.decryptedSentence = decryptedSentence;
+    public void setEncryptedSentence(String encryptedSentence) {
+        this.encryptedSentence = encryptedSentence;
     }
 
     public int getDecryptionKey() {
@@ -30,16 +30,15 @@ public class Decoder {
         return decryptedSentence;
     }
 
-    public void setEncryptedSentence(String encryptedSentence) {
-        this.encryptedSentence = encryptedSentence;
+    public void setDecryptedSentence(String decryptedSentence) {
+        this.decryptedSentence = decryptedSentence;
     }
-
     @Override
     public String toString() {
         return "Decoder[\n" +
                 "Input Sentence= " + encryptedSentence + "\n" +
                 "Key= " + decryptionKey + "\n" +
-                "Encrypted Sentence= " + decryptedSentence + "\n" +
+                "Decrypted Sentence= " + decryptedSentence + "\n" +
                 "]";
     }
 
