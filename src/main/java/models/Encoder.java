@@ -40,9 +40,9 @@ public class Encoder {
     @Override
     public String toString() {
         return "Encoder[\n" +
-                "Input Sentence= " + inputSentence + "\n" +
-                "Key= " + key + "\n" +
-                "Encrypted Sentence= " + encodedResult + "\n" +
+                "Input Sentence= " + getInputSentence() + "\n" +
+                "Key= " + getKey() + "\n" +
+                "Encrypted Sentence= " + getEncodedResult() + "\n" +
                 "]";
     }
 
