@@ -15,6 +15,12 @@ class DecoderTest {
         Decoder testDecoder = new Decoder("pb qdph", 3);
         assertEquals("pb qdph", testDecoder.getEncryptedSentence());
     }
+    @Test
+    public void newDecoder_getsDecryptionKeyValue_3() {
+        Decoder testDecoder = new Decoder("pb qdph", 3);
+        assertEquals(3, testDecoder.getDecryptionKey());
+    }
+
 
 
 }
