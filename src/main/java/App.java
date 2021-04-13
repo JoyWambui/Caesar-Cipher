@@ -28,7 +28,10 @@ public class App {
                 if (chosenOption.equals("Encrypt")){
                     Encoder encryption = new Encoder(inputSentence,key);
                     String outputSentence = encryption.encode(inputSentence,key);
-                    System.out.println(outputSentence);
+                    encryption.setInputSentence(inputSentence);
+                    encryption.setKey(key);
+                    encryption.setEncodedResult(outputSentence);
+                    System.out.println(encryption.toString());
                 }else{
                     System.out.println("next");
                 }
