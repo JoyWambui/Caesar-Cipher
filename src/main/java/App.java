@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import models.*;
 
@@ -31,14 +30,14 @@ public class App {
                     encryption.setInputSentence(inputSentence);
                     encryption.setKey(key);
                     encryption.setEncodedResult(outputSentence);
-                    System.out.println(encryption.toString());
+                    System.out.println(encryption);
                 }else{
                     Decoder decryption = new Decoder(inputSentence,key);
                     String outputSentence = decryption.decode(inputSentence,key);
                     decryption.setEncryptedSentence(inputSentence);
                     decryption.setDecryptionKey(key);
                     decryption.setDecryptedSentence(outputSentence);
-                    System.out.println(decryption.toString());
+                    System.out.println(decryption);
                 }
 
             } else if (chosenOption.equals("Exit")) {
