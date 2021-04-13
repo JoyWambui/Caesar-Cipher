@@ -39,11 +39,11 @@ public class Encoder {
 
     @Override
     public String toString() {
-        return "Encoder{" +
-                "inputSentence='" + inputSentence + '\'' +
-                ", key=" + key +
-                ", encodedResult='" + encodedResult + '\'' +
-                '}';
+        return "Encoder[\n" +
+                "Input Sentence= " + inputSentence + "\n" +
+                "Key= " + key + "\n" +
+                "Encrypted Sentence= " + encodedResult + "\n" +
+                "]";
     }
 
     public String encode(String inputSentence, int key){
