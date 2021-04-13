@@ -3,18 +3,46 @@ package models;
 public class Decoder {
     private String encryptedSentence;
     private int decryptionKey;
+    private String decryptedSentence;
     public  Decoder(String encryptedSentence, int decryptionKey){
         this.encryptedSentence = encryptedSentence;
         this.decryptionKey = decryptionKey;
     }
 
     public String getEncryptedSentence() {
+
         return encryptedSentence;
+    }
+
+    public void setDecryptedSentence(String decryptedSentence) {
+        this.decryptedSentence = decryptedSentence;
     }
 
     public int getDecryptionKey() {
         return decryptionKey;
     }
+
+    public void setDecryptionKey(int decryptionKey) {
+        this.decryptionKey = decryptionKey;
+    }
+
+    public String getDecryptedSentence() {
+        return decryptedSentence;
+    }
+
+    public void setEncryptedSentence(String encryptedSentence) {
+        this.encryptedSentence = encryptedSentence;
+    }
+
+    @Override
+    public String toString() {
+        return "Decoder[\n" +
+                "Input Sentence= " + encryptedSentence + "\n" +
+                "Key= " + decryptionKey + "\n" +
+                "Encrypted Sentence= " + decryptedSentence + "\n" +
+                "]";
+    }
+
     public String decode(String encryptedSentence, int decryptionKey){
         StringBuilder decodedStringBuilder = new StringBuilder();
         decryptionKey = 26- decryptionKey;
