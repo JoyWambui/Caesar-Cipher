@@ -1,8 +1,12 @@
 package models;
 
 public class Decoder {
-    public  Decoder(String inputSentence, int key){
-
+    private String encryptedSentence;
+    public  Decoder(String encryptedSentence, int key){
+    this.encryptedSentence = encryptedSentence;
     }
 
+    public String getEncryptedSentence() {
+        return encryptedSentence;
+    }
 }
