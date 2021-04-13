@@ -17,13 +17,20 @@ public class EncoderTest {
     }
     @Test
     public void newEncoder_getsKeyValue_3() {
-        Encoder sampleEncoder = new Encoder("my Name", 3, "pb qdph");
+        Encoder sampleEncoder = new Encoder("my name", 3, "pb qdph");
         assertEquals(3, sampleEncoder.getKey());
     }
     @Test
     public void newEncoder_getsResultSentence_pbQdph() {
-        Encoder sampleEncoder = new Encoder("my Name", 3, "pb qdph");
+        Encoder sampleEncoder = new Encoder("my name", 3, "pb qdph");
         assertEquals("pb qdph", sampleEncoder.getEncodedResult());
+    }
+    @Test
+    public void encode_encodeInputSentence_String(){
+        Encoder sampleEncoder = new Encoder("my name", 3, "pb qdph");
+        String expectedOutput = sampleEncoder.getEncodedResult();
+        String methodOutput = sampleEncoder.encode("my name",3);
+        assertEquals(expectedOutput,methodOutput);
     }
 
 
