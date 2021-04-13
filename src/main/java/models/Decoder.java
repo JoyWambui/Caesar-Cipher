@@ -36,9 +36,9 @@ public class Decoder {
     @Override
     public String toString() {
         return "Decoder[\n" +
-                "Input Sentence= " + encryptedSentence + "\n" +
-                "Key= " + decryptionKey + "\n" +
-                "Decrypted Sentence= " + decryptedSentence + "\n" +
+                "Input Sentence= " + getEncryptedSentence()+ "\n" +
+                "Key= " + getDecryptionKey() + "\n" +
+                "Decrypted Sentence= " + getDecryptedSentence() + "\n" +
                 "]";
     }
 
