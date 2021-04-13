@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import models.Encoder;
+import models.*;
 
 public class App {
     public static void main(String[]args)throws Exception{
@@ -33,7 +33,12 @@ public class App {
                     encryption.setEncodedResult(outputSentence);
                     System.out.println(encryption.toString());
                 }else{
-                    System.out.println("next");
+                    Decoder decryption = new Decoder(inputSentence,key);
+                    String outputSentence = decryption.encode(inputSentence,key);
+                    decryption.setDecryptedSentence(inputSentence);
+                    decryption.setDecryptionKey(key);
+                    decryption.setEncryptedSentence(outputSentence);
+                    System.out.println(decryption.toString());
                 }
 
             } else if (chosenOption.equals("Exit")) {
