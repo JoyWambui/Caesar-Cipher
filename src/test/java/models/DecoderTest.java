@@ -20,6 +20,14 @@ class DecoderTest {
         Decoder testDecoder = new Decoder("pb qdph", 3);
         assertEquals(3, testDecoder.getDecryptionKey());
     }
+    @Test
+    public void decode_decodeEncryptedSentence_String(){
+        Decoder testDecoder = new Decoder("pb qdph", 3);
+        String expectedOutput = "my name";
+        String methodOutput = testDecoder.decode("pb qdph",3);
+        assertEquals(expectedOutput,methodOutput);
+    }
+
 
 
 
